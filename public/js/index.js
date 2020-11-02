@@ -1,7 +1,15 @@
 
 
 $(document).ready(function(){
-   console.log('#111');
+
+   $.ajax({
+      url: '/init',
+      dataType: 'json',
+      type: 'POST',
+      success: function(result) {
+         console.log(result);
+      }
+   });
 
 
 });
