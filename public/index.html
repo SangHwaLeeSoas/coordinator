@@ -117,7 +117,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>7 / 10<sup style="font-size: 20px">℃</sup></h3>
+                <h3 id="temp"><sup style="font-size: 20px">℃</sup></h3>
                 <p>온도</p>
               </div>
               <div class="icon">
@@ -130,8 +130,8 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-                <p>습도</p>
+                <h3 id="realTemp"><sup style="font-size: 20px"></sup></h3>
+                <p>체감온도</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -143,8 +143,8 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-                <p>강수확률</p>
+                <h3 id="airName"><sup style="font-size: 20px">%</sup></h3>
+                <p>대기질</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -152,17 +152,8 @@
             </div>
           </div>
           <!-- ./col -->
-         <div class="col-lg-3 col-6">
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>나쁨</h3>
-
-                <p>미세먼지 농도</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-            </div>
+          <div class="col-lg-3 col-6">
+            <img id="icon" style="margin-left: 23%;height: 40%;" />
           </div>
           <!-- ./col -->
         </div>
