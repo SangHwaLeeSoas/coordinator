@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70f22a04-2cc4-4797-a11d-840ddef501f6" name="Default Changelist" comment="날씨 크롤링 적용">
+    <list default="true" id="70f22a04-2cc4-4797-a11d-840ddef501f6" name="Default Changelist" comment="회원 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,7 @@
       <workItem from="1605673575044" duration="4528000" />
       <workItem from="1605772690404" duration="600000" />
       <workItem from="1605831090089" duration="2139000" />
-      <workItem from="1605935067271" duration="6247000" />
+      <workItem from="1605935067271" duration="7156000" />
     </task>
     <task id="LOCAL-00001" summary="디자인 템플릿 적용">
       <created>1604213121298</created>
@@ -127,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604414750320</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="회원 완료">
+      <created>1605969132213</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605969132213</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +154,8 @@
     <MESSAGE value="MYSQL 적용" />
     <MESSAGE value="날씨 크롤링 적용" />
     <MESSAGE value="1. 날씨 정보 크롤링&#10;2. 메인 화면 카드 및 아이콘 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 날씨 정보 크롤링&#10;2. 메인 화면 카드 및 아이콘 적용" />
+    <MESSAGE value="회원 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원 완료" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604143975077">
@@ -173,10 +178,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="389" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1604143865403" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604415201007">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605969137471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1604415201007" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1605969137471" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604144289412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
