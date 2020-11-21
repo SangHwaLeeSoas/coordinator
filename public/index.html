@@ -66,25 +66,19 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview" id="userList">
               <li class="nav-item" data-toggle="modal" data-target="#modal-secondary">
                 <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>회원 등록</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>박길동</p>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>홍길동</p>
-                </a>
-              </li>
+              </li>-->
             </ul>
           </li>
         </ul>
@@ -223,27 +217,27 @@
 
         <div class="card-body">
           <div class="form-group">
-            <label for="exampleInputEmail1">이름</label>
-            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="이름을 입력해주세요">
-          </div>
+            <label for="registName">이름</label>
+            <input type="text" name="email" class="form-control" id="registName" placeholder="이름을 입력해주세요">
+
         </div><br/>
 
         <div class="form-group clearfix" style="margin-left: 5%;">
           <h5><b>추위를 느끼는 정도</b></h5><br/>
           <div class="icheck-success d-inline">
-            <input type="radio" name="r3" checked="" id="radioSuccess1">
+            <input type="radio" name="r3" checked="" id="radioSuccess1" value="1">
             <label for="radioSuccess1">
               하
             </label>
           </div>
           <div class="icheck-success d-inline">
-            <input type="radio" name="r3" id="radioSuccess2">
+            <input type="radio" name="r3" id="radioSuccess2" value="2">
             <label for="radioSuccess2">
               중
             </label>
           </div>
           <div class="icheck-success d-inline">
-            <input type="radio" name="r3" id="radioSuccess3">
+            <input type="radio" name="r3" id="radioSuccess3" value="3">
             <label for="radioSuccess3">
               상
             </label>
@@ -251,7 +245,8 @@
         </div>
       </div>
       <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-outline-light">저장</button>
+        <button id="registUser" type="button" class="btn btn-outline-light">저장</button>
+        <button id="modifyUser" type="button" class="btn btn-outline-light" style="display:none;">변경</button>
       </div>
     </div>
     <!-- /.modal-content -->

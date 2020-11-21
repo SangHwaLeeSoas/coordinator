@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 const axios = require("axios");
@@ -10,12 +11,16 @@ mysql_dbc.test_open(connection);
 
 
 /* GET Index */
-router.get('/', function(req, res, next) {
+router.get('/', async (req, res) => {
   res.render('index', { title: 'Express' });
-
-
-
 });
+
+function getUsers(){
+  var sql = 'SELECT * FROM coordinator.users';
+  connection.query( sql, function (err, result) {
+    return result;
+  });
+}
 
 
 router.post('/init', async (req, res, next) => {
@@ -58,11 +63,64 @@ router.post('/init', async (req, res, next) => {
       airName : $airName
     };
 
+    let result = getUsers();
+    console.log('!@#!@#!@#!@#!#!');
+    console.log(result);
 
 
     return res.json(dateList);
   })
 
+});
+
+/* 회원 등록 */
+router.post('/user/regist', async (req, res, next) => {
+  console.log('/user/regist..................');
+  let userName = req.body.userName;
+  let userScore = req.body.userScore;
+
+  var sql = 'INSERT INTO coordinator.users (USER_NAME, USER_SCORE) VALUES (?, ?)';
+  connection.query(sql, [userName, userScore], function (err, result) {
+  res.json({code : 200});
+  });
+});
+
+/* 회원 수정 */
+router.post('/user/modify', async (req, res, next) => {
+  console.log('/user/modify..................');
+  let userName = req.body.userName;
+  let userScore = req.body.userScore;
+  let userIdx = req.body.userIdx;
+
+  console.log('=====================');
+  console.log(userName);
+  console.log(userScore);
+  console.log(userIdx);
+
+  var sql = 'UPDATE coordinator.users SET USER_NAME = ?, USER_SCORE = ? WHERE USER_IDX = ?';
+  connection.query(sql, [userName, userScore, userIdx], function (err, result) {
+    res.json({code : 200});
+  });
+});
+
+/* 회원 삭제 */
+router.post('/user/remove', async (req, res, next) => {
+  console.log('/user/remove..................');
+  let userIdx = req.body.userIdx;
+
+  var sql = 'DELETE FROM coordinator.users WHERE USER_IDX = ?';
+  connection.query(sql, [userIdx], function (err, result) {
+    res.json({code : 200});
+  });
+});
+
+router.post('/user/get', async (req, res, next) => {
+  console.log('/user/get..................');
+
+  var sql = 'SELECT * FROM coordinator.users ';
+  connection.query(sql, function (err, result) {
+    res.json(result);
+  });
 });
 
 
@@ -73,6 +131,6 @@ router.post('/init', async (req, res, next) => {
   connection.query(stmt, function (err, result) {
   console.log(result);
   })
-});*/
+}); */
 
 module.exports = router;

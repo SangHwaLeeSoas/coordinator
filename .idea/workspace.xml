@@ -92,7 +92,12 @@
       <workItem from="1604145297127" duration="1627000" />
       <workItem from="1604205699479" duration="11343000" />
       <workItem from="1604322334957" duration="6092000" />
-      <workItem from="1604405320225" duration="4145000" />
+      <workItem from="1604405320225" duration="5110000" />
+      <workItem from="1604492629636" duration="4663000" />
+      <workItem from="1605673575044" duration="4528000" />
+      <workItem from="1605772690404" duration="600000" />
+      <workItem from="1605831090089" duration="2139000" />
+      <workItem from="1605935067271" duration="6247000" />
     </task>
     <task id="LOCAL-00001" summary="디자인 템플릿 적용">
       <created>1604213121298</created>
@@ -115,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604328348613</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. 날씨 정보 크롤링&#10;2. 메인 화면 카드 및 아이콘 적용">
+      <created>1604414750320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604414750320</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +149,8 @@
     <MESSAGE value="디자인 템플릿 적용" />
     <MESSAGE value="MYSQL 적용" />
     <MESSAGE value="날씨 크롤링 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="날씨 크롤링 적용" />
+    <MESSAGE value="1. 날씨 정보 크롤링&#10;2. 메인 화면 카드 및 아이콘 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 날씨 정보 크롤링&#10;2. 메인 화면 카드 및 아이콘 적용" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604143975077">
@@ -160,10 +173,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="389" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1604143865403" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604328365851">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604415201007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1604328365851" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1604415201007" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604144289412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,6 +185,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="223" width="584" height="594" key="find.popup/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1604219230150" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605966440175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1605966440175" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604145150691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
