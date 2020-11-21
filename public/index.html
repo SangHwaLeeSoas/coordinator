@@ -47,7 +47,7 @@
     <a href="/" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Coordinator</span>
+      <span id="mainUserName" class="brand-text font-weight-light">Coordinator</span>
     </a>
 
     <!-- Sidebar -->
@@ -95,7 +95,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Coordinator</h1>
+            <h1 class="m-0 text-dark">Weather</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -168,12 +168,15 @@
               </div>
               <div class="card-body">
                 <div class="tab-content" id="custom-tabs-one-tabContent">
-                  <div class="tab-pane fade active show" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna
-                    feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id.
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius
-                    ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh
-                    cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                  <style>
+                    #imagesArea img {height:20%; width:20%;}
+                  </style>
+                  <div id="imagesArea" class="tab-pane fade active show" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+
+                    <!--<img src="/images/1.png">
+                    <img src="/images/2.png">
+                    <img src="/images/3.png">
+                    <img src="/images/4.png">-->
                   </div>
                 </div>
               </div>
@@ -189,10 +192,11 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2020 <a href="http://adminlte.io">이찬 & 지상</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.5
+      <button id="setSummer" type="button" class="btn btn-block btn-primary">여름</button>
+      <button id="setWinter" type="button" class="btn btn-block btn-danger">겨울</button>
     </div>
   </footer>
 

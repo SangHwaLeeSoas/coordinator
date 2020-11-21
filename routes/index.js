@@ -73,6 +73,28 @@ router.post('/init', async (req, res, next) => {
 
 });
 
+/* 옷계산 */
+router.post('/show/look', async (req, res, next) => {
+  console.log('/show/look..................');
+
+  let lookType = req.body.lookType;
+
+  let sql = 'SELECT * FROM coordinator.look WHERE LOOK_TYPE = ? ORDER BY RAND() LIMIT 1';
+  connection.query(sql, lookType, function (err, result) {
+    res.json(result);
+
+  });
+
+});
+
+// async function get1Sql(score, arr){
+//   await connection.query(sql, 1, function (err, result) {
+//     score += result.SCORE;
+//     console.log('#1' + result.SCORE);
+//     arr.push(result.LOOK_IDX);
+//   });
+// }
+
 /* 회원 등록 */
 router.post('/user/regist', async (req, res, next) => {
   console.log('/user/regist..................');
