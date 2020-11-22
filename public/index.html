@@ -49,6 +49,7 @@
            style="opacity: .8">
       <span id="mainUserName" class="brand-text font-weight-light">Coordinator</span>
       <input type="hidden" id="selectedUserIdx" />
+      <input type="hidden" id="maskFlag" value="0" />
     </a>
 
     <!-- Sidebar -->
@@ -98,6 +99,20 @@
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Weather</h1>
           </div><!-- /.col -->
+
+          <!-- 평가 버튼 -->
+          <div class="box" style="margin-left: 80%;">
+            <div class="box-body">
+              <div class="margin">
+                <div calss="btn-group">
+                  <button id="setSummer" type="button" class="btn btn-block btn-primary">여름</button>
+                  <button id="setWinter" type="button" class="btn btn-block btn-danger">겨울</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./평가 버튼 -->
+
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -179,6 +194,11 @@
                     <img src="/images/3.png">
                     <img src="/images/4.png">-->
                   </div>
+                  <div id="checkBtnArea" style="display:none; text-align:center; margin-top: 5%;">
+                    <button type="button" class="btn btn-success checkScoreBtn" data-val="1">추움</button>
+                    <button type="button" class="btn btn-success checkScoreBtn" data-val="0">적당</button>
+                    <button type="button" class="btn btn-success checkScoreBtn" data-val="-1">더움</button>
+                  </div>
                 </div>
               </div>
               <!-- /.card -->
@@ -186,14 +206,6 @@
           </div>
         </div>
         <!-- /착장화면 -->
-
-        <!-- 평가 버튼 -->
-        <div class="btn-group-vertical" id="checkBtnArea" style="display:none;">
-          <button type="button" class="btn btn-success checkScoreBtn" data-val="1">추움</button>
-          <button type="button" class="btn btn-success checkScoreBtn" data-val="0">적당</button>
-          <button type="button" class="btn btn-success checkScoreBtn" data-val="-1">더움</button>
-        </div>
-        <!-- ./평가 버튼 -->
 
       </div><!-- /.container-fluid -->
     </section>
@@ -203,10 +215,6 @@
   <footer class="main-footer">
     <strong>Copyright &copy; 2020 <a href="http://adminlte.io">이찬 & 지상</a>.</strong>
     All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <button id="setSummer" type="button" class="btn btn-block btn-primary">여름</button>
-      <button id="setWinter" type="button" class="btn btn-block btn-danger">겨울</button>
-    </div>
   </footer>
 
   <!-- Control Sidebar -->

@@ -25,17 +25,18 @@ $(document).ready(function(){
    $('#setSummer').on('click', function(){
       $('#temp').text('28  ℃');
       $('#realTemp').text('26  ℃');
+      $('#maskFlag').val('1');
    });
    $('#setWinter').on('click', function(){
       $('#temp').text('-2  ℃');
       $('#realTemp').text('0  ℃');
+      $('#maskFlag').val('0');
    });
 
    /*평가*/
    $('.checkScoreBtn').on('click', function(){
       var userIdx = $('#selectedUserIdx').val();
       var userScore = $(this).data('val');
-      alert(userScore);
 
       $.ajax({
          url: '/set/score',
@@ -256,8 +257,11 @@ var fnShowLook = function($this){
 
    var imagesHtml = '';
    for (var i=0; i < arr.length; i++){
-      imagesHtml += '<img src="/images/' + arr[i] + '.png">'
+      imagesHtml += '<img src="/images/' + arr[i] + '.png">';
    }
+
+   if($('#maskFlag').val() == '1')
+      imagesHtml += '<img src="/images/99.jpg">';
 
    $('#imagesArea').html(imagesHtml);
    $('#checkBtnArea').show();
@@ -319,8 +323,8 @@ var fnInitWeather = function(){
          $('#airName').text(result.airName);
          $('#icon').attr('src', 'https://www.accuweather.com' + result.icon);
 
-         if(result.airNum){
-            // TODO : 마스크 착용
+         if(parseInt(result.airNum) > 70){
+            $('#maskFlag').val(1);
          }
 
       }
