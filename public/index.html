@@ -48,6 +48,7 @@
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span id="mainUserName" class="brand-text font-weight-light">Coordinator</span>
+      <input type="hidden" id="selectedUserIdx" />
     </a>
 
     <!-- Sidebar -->
@@ -186,6 +187,14 @@
         </div>
         <!-- /착장화면 -->
 
+        <!-- 평가 버튼 -->
+        <div class="btn-group-vertical" id="checkBtnArea" style="display:none;">
+          <button type="button" class="btn btn-success checkScoreBtn" data-val="1">추움</button>
+          <button type="button" class="btn btn-success checkScoreBtn" data-val="0">적당</button>
+          <button type="button" class="btn btn-success checkScoreBtn" data-val="-1">더움</button>
+        </div>
+        <!-- ./평가 버튼 -->
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -227,23 +236,23 @@
         </div><br/>
 
         <div class="form-group clearfix" style="margin-left: 5%;">
-          <h5><b>추위를 느끼는 정도</b></h5><br/>
+          <h5><b>신체 특성</b></h5><br/>
           <div class="icheck-success d-inline">
             <input type="radio" name="r3" checked="" id="radioSuccess1" value="1">
             <label for="radioSuccess1">
-              하
+              추위를 많이 탐
             </label>
           </div>
           <div class="icheck-success d-inline">
-            <input type="radio" name="r3" id="radioSuccess2" value="2">
+            <input type="radio" name="r3" id="radioSuccess2" value="0">
             <label for="radioSuccess2">
-              중
+              보통
             </label>
           </div>
           <div class="icheck-success d-inline">
-            <input type="radio" name="r3" id="radioSuccess3" value="3">
+            <input type="radio" name="r3" id="radioSuccess3" value="-1">
             <label for="radioSuccess3">
-              상
+              더위를 많이 탐
             </label>
           </div>
         </div>

@@ -30,11 +30,33 @@ $(document).ready(function(){
       $('#temp').text('-2  ℃');
       $('#realTemp').text('0  ℃');
    });
+
+   /*평가*/
+   $('.checkScoreBtn').on('click', function(){
+      var userIdx = $('#selectedUserIdx').val();
+      var userScore = $(this).data('val');
+      alert(userScore);
+
+      $.ajax({
+         url: '/set/score',
+         dataType: 'json',
+         async : false,
+         cache : false,
+         data : {userIdx : userIdx, userScore : userScore},
+         type: 'POST',
+         success: function(res) {
+            location.reload();
+         }
+      });
+
+   });
 });
 
 var fnShowLook = function($this){
 
    $('#mainUserName').text($this.siblings('p').text());
+   $('#selectedUserIdx').val($this.closest('li').data('idx'));
+   var pscore = $this.closest('li').data('score');
 
    let tmp = parseInt($('#realTemp').text());
    let min = 0;
@@ -45,8 +67,21 @@ var fnShowLook = function($this){
    // TEST
    if(tmp < 10){
       // 1 2 3 4
-      let min = 10;
-      let max = 20;
+      let min = 10 + pscore;
+      if(min <= 6)
+         min = 6;
+      if(min >= 8)
+         min = 8;
+      let max = 12 + pscore;
+      if(max <= 8)
+         max = 8;
+      if(max >= 12)
+         max = 12;
+
+      console.log(min);
+      console.log(pscore);
+      console.log(max);
+
       for (var i = 0; i < 100; i ++){
          if(min <= score && score <= max){
             console.log(score);
@@ -113,8 +148,16 @@ var fnShowLook = function($this){
 
    }else if(10 <= tmp && tmp < 20){
       // 1 3 4
-      min = 6;
-      max = 10;
+      min = 6 + pscore;
+      if(min <= 4)
+         min = 4;
+      if(min >= 10)
+         min = 10;
+      max = 10 + pscore;
+      if(max <= 6)
+         max = 6;
+      if(max >= 12)
+         max = 12;
       for (var i = 0; i < 100; i ++){
          if(min <= score && score <= max){
             console.log(score);
@@ -167,7 +210,12 @@ var fnShowLook = function($this){
    }else if(tmp >= 20){
       // 3 4
       min = 2;
-      max = 6;
+      max = 6 + pscore;
+      if(max <= 4)
+         max = 4;
+      if(max >= 10)
+         max = 10;
+
       for (var i = 0; i < 100; i ++){
          if(min <= score && score <= max){
             console.log(score);
@@ -212,6 +260,7 @@ var fnShowLook = function($this){
    }
 
    $('#imagesArea').html(imagesHtml);
+   $('#checkBtnArea').show();
 };
 
 /* 회원 등록 */

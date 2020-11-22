@@ -15,12 +15,13 @@ router.get('/', async (req, res) => {
   res.render('index', { title: 'Express' });
 });
 
-function getUsers(){
-  var sql = 'SELECT * FROM coordinator.users';
-  connection.query( sql, function (err, result) {
-    return result;
-  });
-}
+// function getUsers(){
+//   var sql = 'SELECT A.USER_IDX, A.USER_NAME, A.USER_SCORE + IFNULL((SELECT SUM(SCORE) FROM USERS_HISTORY WHERE USER_IDX = A.USER_IDX), 0) AS USER_SCORE' +
+//             'FROM coordinator.users A';
+//   connection.query( sql, function (err, result) {
+//     return result;
+//   });
+// }
 
 
 router.post('/init', async (req, res, next) => {
@@ -63,10 +64,6 @@ router.post('/init', async (req, res, next) => {
       airName : $airName
     };
 
-    let result = getUsers();
-    console.log('!@#!@#!@#!@#!#!');
-    console.log(result);
-
 
     return res.json(dateList);
   })
@@ -83,6 +80,20 @@ router.post('/show/look', async (req, res, next) => {
   connection.query(sql, lookType, function (err, result) {
     res.json(result);
 
+  });
+
+});
+
+/* 옷계산 */
+router.post('/set/score', async (req, res, next) => {
+  console.log('/set/score..................');
+
+  let userIdx = req.body.userIdx;
+  let userScore = req.body.userScore
+
+  let sql = 'INSERT INTO coordinator.USERS_HISTORY(USER_IDX, SCORE) VALUES(?, ?)';
+  connection.query(sql, [userIdx, userScore], function (err, result) {
+    res.json({code : 200});
   });
 
 });
@@ -139,8 +150,9 @@ router.post('/user/remove', async (req, res, next) => {
 router.post('/user/get', async (req, res, next) => {
   console.log('/user/get..................');
 
-  var sql = 'SELECT * FROM coordinator.users ';
+  var sql = 'SELECT A.USER_IDX, A.USER_NAME, A.USER_SCORE + IFNULL((SELECT SUM(SCORE) FROM coordinator.USERS_HISTORY WHERE USER_IDX = A.USER_IDX), 0) AS USER_SCORE FROM coordinator.users A';
   connection.query(sql, function (err, result) {
+    console.log(err);
     res.json(result);
   });
 });
